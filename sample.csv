@@ -1,0 +1,12 @@
+id;ops;expected
+c1;create:T1:2026-12-01:2026-12-05|submit|approve|complete:2026-12-06;OK|COMPLETED
+c2;create:T2:2026-12-01:2026-12-05|submit|reject:Нет бюджета на поездку;OK|REJECTED
+c3;create:T3:2026-12-01:2026-12-05|submit|reject:Нет;ERROR|IllegalArgumentException|SUBMITTED
+c4;create:T4:2026-12-01:2026-12-05|submit|approve|complete:2026-12-05;ERROR|IllegalStateException|APPROVED
+c5;create:T5:2026-12-01:2026-12-05|submit|approve|cancel:2026-11-01;OK|CANCELLED
+c6;create:T6:2026-12-01:2026-12-05|submit|approve|cancel:2026-11-02;ERROR|IllegalStateException|APPROVED
+c7;create:T7:2026-12-01:2026-12-05|approve;ERROR|IllegalStateException|DRAFT
+c8;create:T8::|submit;ERROR|IllegalStateException|DRAFT
+c9;create:T9:2026-02-30:2026-03-01;ERROR|IllegalArgumentException|-
+c10;create:T10:2026-12-05:2026-12-01;ERROR|IllegalArgumentException|-
+c11;create:T11:2026-12-01:2026-12-05|cancel:2026-12-02;OK|CANCELLED
